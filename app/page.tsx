@@ -3,6 +3,7 @@ import {cookies} from 'next/headers'
 import Link from 'next/link'
 
 import LogoutButton from '../components/LogoutButton'
+import TodoList from "@/app/components/todo-list";
 
 export const dynamic = 'force-dynamic'
 
@@ -35,7 +36,7 @@ export default async function Index() {
             </nav>
 
             <div>
-                CONTENT
+                <TodoList />
             </div>
 
             <div className="flex justify-center text-center text-xs">
