@@ -3,6 +3,7 @@ create table if not exists todos (
   created_at timestamp with time zone default timezone('utc'::text, now()) not null,
   title text,
   is_complete boolean default false,
+  is_moved boolean default false,
   user_id uuid references auth.users default auth.uid()
 );
 
